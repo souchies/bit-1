@@ -1,0 +1,850 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo del cuerpo - Ahora con Raleway */
+  body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    background-color: #fff;
+    color: #222;
+    line-height: 1.6;
+  }
+  
+  /* Header sticky - SE MANTIENE SIN CAMBIOS */
+  header {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1000;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    /* Se mantiene la fuente original del nav */
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    /* Se mantiene la fuente original del nav */
+  }
+  
+  nav ul li a:hover {
+    color: #000;
+  }
+  
+  /* Resto del CSS se mantiene igual */
+  .hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .bio, .galeria, .contacto {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+
+
+  /* NAVBAR MINIMALISTA ORIGINAL (se mantiene sin cambios) */
+  .navbar-minimal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+  
+  /* Logo mantiene Montserrat  */
+  .nav-logo {
+    display: flex;
+    cursor: pointer;
+  }
+  
+  .logo-letter {
+    font-family: 'Montserrat', sans-serif; /* SE MANTIENE */
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: white;
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.9;
+  }
+  
+  /* ... (resto de estilos del navbar se mantienen igual) ... */
+  
+  /* Imagen principal */
+  .hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Secciones */
+  .bio, .galeria, .contacto {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  /* Galería */
+  .galeria .imagenes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .galeria .imagenes img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Botón "Volver arriba" */
+  #scrollTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    padding: 12px 16px;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+  }
+  
+  #scrollTopBtn:hover {
+    background-color: #333;
+  }
+  /* Estilos para la galería de imágenes */
+  .gisele {
+    max-width: 1200px; /* ajustar este valor según necesites */
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .gisele .imagenes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajusta el minmax según prefieras */
+    gap: 20px;
+    justify-items: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+  }
+  
+  .gisele .imagenes img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /*  imágenes mantengan sus proporciones */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gisele .imagenes img:hover {
+    transform: scale(1.03); /* Efecto de zoom al pasar el mouse */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  
+  /*  que el título de la sección esté centrado */
+  .gisele h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+  }
+  /* GALERÍA - FONDO NEGRO Y MOSAICO */
+  .portadas {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Letras blancas */
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+  
+  .portadas h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+  }
+  
+  .grid-portadas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Mosaico adaptable */
+    gap: 20px; /* Espacio entre imágenes */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .grid-portadas img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene proporciones */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .grid-portadas img:hover {
+    transform: scale(1.03); /* Efecto hover */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  /* HEADER NEGRO SOLO EN GALERÍA */
+  .galeria-page header {
+    background-color: #000; /* Fondo negro */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Sombra clara para contraste */
+  }
+  
+  .galeria-page header h1,
+  .galeria-page nav ul li a {
+    color: #fff; /* Letras blancas */
+  }
+  
+  .galeria-page nav ul li a:hover {
+    color: #ccc; /* Efecto hover gris */
+  }
+  /* Reset básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo del cuerpo */
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #fff;
+    color: #222;
+    line-height: 1.6;
+  }
+  
+  /* Header sticky - ESTILO BASE (blanco) */
+  header {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1000;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: inherit;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #000;
+  }
+  
+  /* ESTILOS ESPECÍFICOS PARA GALERÍA */
+  .galeria-page {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .galeria-page header {
+    background-color: #000;
+    box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+  }
+  
+  .galeria-page header h1,
+  .galeria-page nav ul li a {
+    color: #fff;
+  }
+  
+  .galeria-page nav ul li a:hover {
+    color: #ccc;
+  }
+  
+  /* Galería de portadas */
+  .portadas {
+    padding: 40px 20px;
+    min-height: calc(100vh - 160px); /* Ajuste para el footer */
+  }
+  
+  .portadas h2 {
+    text-align: center;
+    margin: 0 auto 40px;
+    font-size: 2.5rem;
+    max-width: 800px;
+  }
+  
+  .grid-portadas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .grid-portadas img {
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .grid-portadas img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+  }
+  
+  /* Footer para galería */
+  .galeria-page footer {
+    background-color: #000;
+    color: #aaa;
+    border-top: 1px solid #333;
+  }
+  
+  /* Botón "Volver arriba" para galería */
+  .galeria-page #scrollTopBtn {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .galeria-page #scrollTopBtn:hover {
+    background-color: #ccc;
+  }
+  /* EFECTO DE APARICIÓN (FADE-IN) AL HACER SCROLL */
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(20px); /* Ligero desplazamiento inicial */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0); /* Vuelve a su posición natural */
+  }
+  /* Botón "Volver arriba" para galería */
+  .galeria-page #scrollTopBtn {
+    background-color: #fff; /* Fondo blanco */
+    color: #000; /* Flecha negra */
+    border: 2px solid #fff; /* Borde blanco */
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3); /* Sombra blanca */
+  }
+  
+  .galeria-page #scrollTopBtn:hover {
+    background-color: #000; /* Fondo negro al hover */
+    color: #fff; /* Flecha blanca al hover */
+    border-color: #fff; /* Borde blanco al hover */
+  }
+  
+  /* 
+     Imágenes simétricas en Home
+     Sección .gisele
+      */
+     .gisele .imagenes {
+      display: grid;
+      /* tantas columnas de mínimo 250px como quepan */
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;              /* espacio uniforme */
+      max-width: 1200px;      /* ancho máximo centralizado */
+      margin: 0 auto;         /* centra el grid */
+    }
+    
+    .gisele .imagenes img {
+      width: 100%;            /* llena el ancho de su celda */
+      height: 300px;          /* todas de 300px de alto */
+      object-fit: cover;      /* recorta sin deformar */
+      object-position: center;/* centra el recorte */
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: block;
+    }
+    /* Navbar Transparente Superpuesto */
+.navbar-overlay {
+    position: fixed; /* Fijo en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1000; /* Siempe por encima */
+    background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+    backdrop-filter: blur(10px); /* Efecto vidrio esmerilado */
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.5s ease;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .nav-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: white;
+    letter-spacing: 2px;
+    margin: 0;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+  }
+  
+  .nav-links a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+    position: relative;
+  }
+  
+  .nav-links a:hover {
+    color: #f0f0f0;
+  }
+  
+  /* Efecto subrayado al hover */
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: white;
+    transition: width 0.3s;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  /* Hero Image */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Altura completa de la pantalla */
+    overflow: hidden;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cubre todo el espacio sin deformar */
+    object-position: center;
+  }
+  /* NAVBAR DINÁMICO MINIMALISTA */
+.navbar-minimal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+  
+  /* Logo con animación de letras */
+  .nav-logo {
+    display: flex;
+    cursor: pointer;
+  }
+  
+  .logo-letter {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: white;
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.9;
+  }
+  
+  .logo-letter:hover {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+  
+  .logo-letter:nth-child(1) { transition-delay: 0.05s; }
+  .logo-letter:nth-child(2) { transition-delay: 0.1s; }
+  .logo-letter:nth-child(3) { transition-delay: 0.15s; }
+  .logo-letter:nth-child(4) { transition-delay: 0.2s; }
+  .logo-letter:nth-child(5) { transition-delay: 0.25s; }
+  .logo-letter:nth-child(6) { transition-delay: 0.3s; }
+  
+  /* Enlaces con efecto sutil */
+  .nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links a {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    overflow: hidden;
+  }
+  
+  .nav-links a span {
+    display: inline-block;
+    transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  
+  .nav-links a:hover span {
+    transform: translateY(-100%);
+  }
+  
+  .nav-links a::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: #fff;
+    font-weight: 500;
+  }
+  
+  /* Animación al hacer scroll */
+  .scrolled {
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      gap: 15px;
+      padding: 0 20px;
+    }
+    .nav-links {
+      gap: 20px;
+    }
+    .logo-letter {
+      font-size: 1.5rem;
+    }
+  }
+  /* FOOTER DINÁMICO MINIMALISTA */
+.footer-minimal {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 20px 30px;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-tagline {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    letter-spacing: 1px;
+  }
+  
+  .footer-bio {
+    max-width: 300px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    opacity: 0.8;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .footer-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: opacity 0.3s ease;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .footer-link:hover {
+    opacity: 0.7;
+  }
+  
+  .footer-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s ease;
+  }
+  
+  .footer-link:hover::after {
+    width: 100%;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .social-icon {
+    color: #fff;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    opacity: 1;
+  }
+  
+  .social-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.6;
+    gap: 8px;
+  }
+  
+  /* Efecto de aparición */
+  .footer-minimal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .footer-minimal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* FOOTER MINIMALISTA ACTUALIZADO */
+.footer-minimal {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px 30px;
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.footer-minimal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  gap: 25px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+
+.footer-bio {
+  max-width: 500px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+.footer-social {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.social-icon {
+  color: #fff;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.social-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 30px auto 0;
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    gap: 20px;
+  }
+  
+  .footer-bio {
+    padding: 0 20px;
+  }
+  
+  .footer-social {
+    gap: 20px;
+  }
+}
