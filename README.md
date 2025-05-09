@@ -1,6 +1,6 @@
 # Sitio Gisele Bündchen - bit-1
 
-aracterísticas
+características
 Biografía completa: Detalles sobre su vida y carrera
 
 Galería interactiva: Muestra sus mejores portadas y fotos
@@ -35,4 +35,4 @@ _Eileen Sofía Jerónimo Camargo - 2025_
 
 
 ## Diseño
-![alt text](image.png)
+![logo](imagefigma.png)
