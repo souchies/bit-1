@@ -848,3 +848,260 @@
     gap: 20px;
   }
 }
+/* Estilos específicos para la página de biografía */
+.bio-page {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.6;
+}
+
+/* NAVBAR IDÉNTICO AL DE GALERÍA */
+.bio-page .navbar-minimal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bio-page .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.bio-page .nav-logo {
+  display: flex;
+  cursor: pointer;
+}
+
+.bio-page .logo-letter {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: white;
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.9;
+}
+
+.bio-page .logo-letter:hover {
+  transform: translateY(-3px);
+  opacity: 1;
+}
+
+.bio-page .nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bio-page .nav-links a {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  overflow: hidden;
+}
+
+.bio-page .nav-links a span {
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.bio-page .nav-links a:hover span {
+  transform: translateY(-100%);
+}
+
+.bio-page .nav-links a::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Contenido principal */
+.bio-container {
+  max-width: 1200px;
+  margin: 120px auto 0;
+  padding: 2rem;
+}
+
+.bio-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.bio-content {
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.bio-content p {
+  margin-bottom: 2rem;
+}
+
+.bio-image-container {
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.bio-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bio-footer {
+  background-color: #111;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: block;
+}
+
+.copyright {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.bio-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .bio-title {
+      font-size: 2rem;
+  }
+  
+  .bio-content {
+      font-size: 1rem;
+  }
+  
+  .bio-page .nav-links {
+      gap: 20px;
+  }
+  
+  .bio-page .logo-letter {
+      font-size: 1.5rem;
+  }
+}
+/* BOTÓN BLANCO COMO EN GALERÍA */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  background-color: white;  /* FONDO BLANCO */
+  color: black;            /* FLECHA NEGRA */
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background-color: #f0f0f0; /* BLANCO MÁS OSCURO AL HOVER */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos generales de contacto */
+body.dark-bg {
+  background-color: #121212;
+  color: white;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Formulario */
+.dark-form {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.dark-input {
+  background-color: #2d2d2d;
+  border: 1px solid #333;
+  color: white;
+  border-radius: 4px;
+  padding: 10px 15px;
+}
+
+.dark-input:focus {
+  background-color: #2d2d2d;
+  color: white;
+  border-color: #555;
+  box-shadow: 0 0 0 0.25rem rgba(100, 100, 100, 0.25);
+}
+
+/* Modal */
+.dark-modal {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+/* Footer */
+.dark-footer {
+  background-color: #1a1a1a;
+  border-top: 1px solid #333;
+}
+
+.dark-footer a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.dark-footer a:hover {
+  color: #ccc !important;
+}
